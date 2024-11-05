@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/docker-compose
 # Добавляем пользоваетля
 adduser jhinelia
 usermod -aG sudo jhinelia
-usernod -aG docker jhinelia
+usermod -aG docker jhinelia
 
 # Установка zsh
 echo_color "Установка zsh"
