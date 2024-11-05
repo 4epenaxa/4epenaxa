@@ -24,12 +24,12 @@ echo_color "Установка Docker Compose..."
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-# Установка zsh
-echo_color "Установка zsh"
-apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Добавляем пользоваетля
 adduser jhinelia
 usermod -aG sudo jhinelia
 usernod -aG docker jhinelia
+
+# Установка zsh
+echo_color "Установка zsh"
+apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
