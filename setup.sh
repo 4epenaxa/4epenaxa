@@ -28,11 +28,9 @@ chmod +x /usr/local/bin/docker-compose
 echo_color "Установка zsh"
 apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# Установка темы zsh
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="gentoo"/g' ~/.zshrc
 
 # Добавляем пользоваетля
 useradd jhinelia
-passwd jhinelia jhinelia
 usermod -aG sudo jhinelia
 usernod -aG docker jhinelia
+passwd jhinelia
